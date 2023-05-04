@@ -103,3 +103,9 @@ sudoku.c:53:7: error: variable ‘encontrado’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 f542e65
+Thu 04 May 2023 09:02:53 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|5
+total_score: 0/70
+304b2e6

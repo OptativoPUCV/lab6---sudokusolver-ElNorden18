@@ -58,7 +58,6 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[k][j] == 0)
         {
           encontrado = 1;
-
           for(int i = 0; i <= 9; i++)
             {
               Node *nuevo = copy(n);
@@ -68,8 +67,9 @@ List* get_adj_nodes(Node* n){
           break;
         }
       }
+    if(encontrado == 1) break;
   }
-    return list;
+  return list;
 }
 
 
