@@ -59,7 +59,7 @@ List* get_adj_nodes(Node* n){
           {
             encontrado = 1;
 
-            for(int i = 0; i < 9, i++)
+            for(int i = 0; i < 9; i++)
               {
                 Node *nuevo = copy(n);
                 nuevo->sudo[k][j] = i;
