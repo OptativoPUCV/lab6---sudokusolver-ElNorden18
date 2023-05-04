@@ -21,3 +21,22 @@ sudoku.c:53:7: error: variable ‘encontrado’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 5570b30
+Thu 04 May 2023 09:00:15 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:58:22: error: ‘i’ undeclared (first use in this function)
+   58 |           if(n->sudo[i][j] == 0)
+      |                      ^
+sudoku.c:58:22: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:62:33: error: expected ‘;’ before ‘)’ token
+   62 |             for(int i = 0; i < 9)
+      |                                 ^
+      |                                 ;
+sudoku.c:53:7: error: variable ‘encontrado’ set but not used [-Werror=unused-but-set-variable]
+   53 |   int encontrado = 0;
+      |       ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0c6ad7c
