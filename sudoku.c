@@ -50,6 +50,7 @@ int is_valid(Node* n)
     int fila[10] = {0};
     int columna[10] = {0};
     int matriz[10] = {0}; 
+    
     for(int j = 0; j < 9; j++)
     {
       if(n->sudo[k][j] != 0)
@@ -57,11 +58,13 @@ int is_valid(Node* n)
         if(fila[n->sudo[k][j]] == 1) return 0;
         else fila[n->sudo[k][j]] = 1;
       }
+      
       if(n->sudo[j][k] != 0)
       {
-        if(columna[n->sudo[k][j]] == 1) return 0;
-        else columna[n->sudo[k][j]] = 1;
+        if(columna[n->sudo[j][k]] == 1) return 0;
+        else columna[n->sudo[j][k]] = 1;
       }
+      
       int i = 3*(k/3) + (j/3);
       int d = 3*(k%3) + (j%3);
       
@@ -70,7 +73,6 @@ int is_valid(Node* n)
         if(matriz[n->sudo[i][d]] == 1) return 0;
         else matriz[n->sudo[i][d]] = 1;
       }
-      
     }
   }
   return 1;
