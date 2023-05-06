@@ -43,19 +43,20 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
-  if(int k = 0; k < 9; k++)
+int is_valid(Node* n)
+{
+  for(int k = 0; k < 9; k++)
   {
     int fila[10] = {0};
     int columna[10] = {0};
-    if(int j = 0; j < 9; j++)
+    for(int j = 0; j < 9; j++)
     {
       if(n->sudo[k][j] != 0)
       {
         if(fila[n->sudo[k][j]] == 1) return 0;
         else fila[n->sudo[k][j]] = 1;
       }
-      if(n->sudo[j][k] != 0)
+      for(n->sudo[j][k] != 0)
       {
         if(columna[n->sudo[k][j]] == 1) return 0;
         else columna[n->sudo[k][j]] = 1;
