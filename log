@@ -121,3 +121,30 @@ Fri 05 May 2023 06:05:54 PM UTC:
  tests:  2|4
 total_score: 15/70
 6a51ecb
+Sat 06 May 2023 11:28:39 PM UTC: 
+ sudoku.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:47:6: error: expected expression before ‘int’
+   47 |   if(int k = 0; k < 9; k++)
+      |      ^~~
+sudoku.c:51:8: error: expected expression before ‘int’
+   51 |     if(int j = 0; j < 9; j++)
+      |        ^~~
+sudoku.c:53:18: error: ‘k’ undeclared (first use in this function)
+   53 |       if(n->sudo[k][j] != 0)
+      |                  ^
+sudoku.c:53:18: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:53:21: error: ‘j’ undeclared (first use in this function)
+   53 |       if(n->sudo[k][j] != 0)
+      |                     ^
+sudoku.c:50:9: error: variable ‘columna’ set but not used [-Werror=unused-but-set-variable]
+   50 |     int columna[10] = {0};
+      |         ^~~~~~~
+sudoku.c:49:9: error: variable ‘fila’ set but not used [-Werror=unused-but-set-variable]
+   49 |     int fila[10] = {0};
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1d3fbbc
