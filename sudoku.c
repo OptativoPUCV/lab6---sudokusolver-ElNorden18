@@ -56,7 +56,7 @@ int is_valid(Node* n)
         if(fila[n->sudo[k][j]] == 1) return 0;
         else fila[n->sudo[k][j]] = 1;
       }
-      for(n->sudo[j][k] != 0)
+      if(n->sudo[j][k] != 0)
       {
         if(columna[n->sudo[k][j]] == 1) return 0;
         else columna[n->sudo[k][j]] = 1;
