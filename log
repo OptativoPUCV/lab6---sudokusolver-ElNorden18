@@ -194,3 +194,25 @@ Sat 06 May 2023 11:54:23 PM UTC:
  tests:  7|1
 total_score: 55/70
 a7d38bb
+Sun 07 May 2023 12:01:45 AM UTC: 
+ sudoku.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:115:14: error: implicit declaration of function ‘create_stack’; did you mean ‘createStack’? [-Werror=implicit-function-declaration]
+  115 |   Stack *s = create_stack();
+      |              ^~~~~~~~~~~~
+      |              createStack
+sudoku.c:115:14: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+sudoku.c:116:19: error: expected ‘;’ before ‘while’
+  116 |   push(s, initial)
+      |                   ^
+      |                   ;
+  117 |   while(s != NULL)
+      |   ~~~~~            
+sudoku.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b28c652

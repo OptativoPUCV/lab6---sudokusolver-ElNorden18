@@ -112,6 +112,20 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack *s = create_stack();
+  push(s, initial)
+  while(s != NULL)
+  {
+      Node *primero = pop(s);
+      if(is_final(primero) == 1) return primero;
+      List *listaAdyacentes = get_adj_nodes(primero);
+      Node *aux = first(listaAdyacentes);
+      while(aux != NULL)
+      {
+        push(s, aux);
+        aux = next(listaAdyacentes);
+      }
+  }
   return NULL;
 }
 
