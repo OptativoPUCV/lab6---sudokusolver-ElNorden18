@@ -116,7 +116,8 @@ Node* DFS(Node* initial, int* cont){
   push(s, initial);
   while(s != NULL)
   {
-      Node *primero = pop(s);
+      Node *primero = top(s);
+      pop(s);
       if(is_final(primero) == 1) return primero;
       List *listaAdyacentes = get_adj_nodes(primero);
       Node *aux = first(listaAdyacentes);
