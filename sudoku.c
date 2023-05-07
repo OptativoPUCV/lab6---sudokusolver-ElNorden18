@@ -94,7 +94,6 @@ List* get_adj_nodes(Node* n){
               Node *nuevo = copy(n);
               nuevo->sudo[k][j] = i;
               if(is_valid(nuevo) == 1) pushBack(list, nuevo);
-              else return 0;
             }
           return list;
         }
