@@ -216,3 +216,20 @@ sudoku.c:130:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 b28c652
+Sun 07 May 2023 12:02:04 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:116:19: error: expected ‘;’ before ‘while’
+  116 |   push(s, initial)
+      |                   ^
+      |                   ;
+  117 |   while(s != NULL)
+      |   ~~~~~            
+sudoku.c:130:1: error: control reaches end of non-void function [-Werror=return-type]
+  130 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7e6fdb4
